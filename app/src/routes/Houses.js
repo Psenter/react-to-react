@@ -12,9 +12,9 @@ export default function Houses() {
       setHouses(data);
     } else {
       getData(ENDPOINT)
-        .then(() => {
-          setHouses();
-          setLocalStorage();
+        .then((data) => {
+          setHouses(data);
+          setLocalStorage(ENDPOINT, data);
         })
     }
   }, []);

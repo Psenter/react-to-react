@@ -3,6 +3,6 @@ export function getLocalStorage(listName) {
   return saved && saved.length > 0 ? JSON.parse(saved) : [];
 }
 
-function setLocalStorage(listName, items) {
+export function setLocalStorage(listName, items) {
   localStorage.setItem(listName, JSON.stringify(items));
 }
